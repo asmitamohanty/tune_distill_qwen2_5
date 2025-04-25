@@ -98,6 +98,7 @@ class ModelType(Enum):
             to a single class for reward modelling.
             See :func:`~torchtune.models.mistral.mistral_reward_7b` or :func:`~torchtune.models.llama2.llama2_reward_7b`
         QWEN2 (str): Qwen2 family of models. See :func:`~torchtune.models.qwen2.qwen2`
+        QWEN2_5 (str): Qwen2_5 family of models. See :func:`~torchtune.models.qwen2_5.qwen2_5`
         CLIP_TEXT (str): CLIP text encoder. See :func:`~torchtune.models.clip.clip_text_encoder_large`
         T5_ENCODER (str): T5 text encoder. See :func:`~torchtune.models.t5.t5_v1_1_xxl_encoder`
 
@@ -121,6 +122,7 @@ class ModelType(Enum):
     PHI4: str = "phi4"
     REWARD: str = "reward"
     QWEN2: str = "qwen2"
+    QWEN2_5: str = "qwen2_5"
     CLIP_TEXT: str = "clip_text"
     T5_ENCODER: str = "t5_encoder"
 

@@ -84,6 +84,16 @@ class TestKDSingleDeviceRecipe:
         ckpt_dir = ckpt_path.parent
         log_file = gen_log_file_name(tmpdir)
 
+        config = "qwen2_5/1.5_to_0.5B_KD_lora_single_device"
+        model_type = "llama3"
+        ckpt_type = "tune"
+        ckpt_component = CKPT_COMPONENT_MAP[ckpt_type]
+        ckpt = model_type + "_" + ckpt_type
+        ckpt_path = Path(CKPT_MODEL_PATHS[ckpt])
+        tokenizer_path = Path(TOKENIZER_PATHS[model_type])
+        ckpt_dir = ckpt_path.parent
+        log_file = gen_log_file_name(tmpdir)
+
         cmd = f"""
         tune run knowledge_distillation_single_device \
             --config {config} \
